@@ -1,5 +1,5 @@
 <template>
- 
+ <div>
  <div class="Container-fluid">
   <div class="front">
     <h1>Latest Spring Collection</h1>
@@ -51,6 +51,37 @@
     </div>
 
 
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+      <div class="col">
+        <div class="card h-50" >
+          <img src="https://i.postimg.cc/GpYrqFVp/banner-img.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Shades</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-50">
+          <img src="https://i.postimg.cc/QdSWTtr8/versace-pour-homme-dylan-blue-eau-de-toilette.webp" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a short card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-50">
+          <img src="https://i.postimg.cc/fL3kGRdK/img-2.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+ </div>
+
+</div>
     
            
 </template>
@@ -180,5 +211,10 @@ function validate(event) {
   color: purple;
 }
 
+
+.card-img-top{
+  width: 30px;
+
+}
 
 </style>
