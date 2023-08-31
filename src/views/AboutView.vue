@@ -1,6 +1,6 @@
 <template>
 <div>
- <div class="card mb-3" style="max-width: 80rem;height: 30rem;">
+ <div class="card mb-3" style="height: 30rem;">
   <div class="row g-0">
     <div class="col-md-4">
         
@@ -36,7 +36,17 @@
     background-color: purple;
 }
 
-.img-fluid{
+.img{
   margin-top: 15%;
+}
+
+.card{
+  margin-top: 5%;
+}
+
+h1{
+  padding: 3%;
+  text-align: center;
+  color: white;
 }
 </style>
