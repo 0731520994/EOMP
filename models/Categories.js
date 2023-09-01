@@ -25,8 +25,7 @@ class Categories{
             FROM Categories
             WHERE categoryID = ${req.params.categoryID}
         `;
-        db.query(query, (err, results) => { // Pass prodID as a parameter
-            if (err) throw err;
+        db.query(query, (err, results) => { 
             res.json({
                 status: res.statusCode,
                 results: results,
@@ -99,10 +98,10 @@ class Categories{
         const categoryName = 'Beauty'; 
     
         const query = `
-          SELECT P.prodID, P.prodName, P.price, P.prodUrl, C.categoryID, C.category
-          FROM Products P
-          JOIN Categories C ON P.categoryID = C.categoryID
-          WHERE C.category = ?;
+          SELECT p.prodID, p.prodName, p.price, p.prodUrl, c.categoryID, c.category
+          FROM Products p
+          JOIN Categories c ON p.categoryID = c.categoryID
+          WHERE c.category = ?;
         `;
     
         db.query(query, [categoryName], (err, results) => {
@@ -120,10 +119,10 @@ class Categories{
         const categoryName = 'Perfumes'; 
     
         const query = `
-          SELECT P.prodID, P.prodName, P.price, P.prodUrl, C.categoryID, C.category
-          FROM Products P
-          JOIN Categories C ON P.categoryID = C.categoryID
-          WHERE C.category = ?;
+          SELECT p.prodID, p.prodName, p.price, p.prodUrl, c.categoryID, c.category
+          FROM Products p
+          JOIN Categories c ON p.categoryID = c.categoryID
+          WHERE c.category = ?;
         `;
     
         db.query(query, [categoryName], (err, results) => {
@@ -140,10 +139,10 @@ class Categories{
         const categoryName = 'Accessories'; 
     
         const query = `
-          SELECT P.prodID, P.prodName, P.price, P.prodUrl, C.categoryID, C.category
+          SELECT p.prodID, p.prodName, p.price, p.prodUrl, c.categoryID, c.category
           FROM Products P
-          JOIN Categories C ON P.categoryID = C.categoryID
-          WHERE C.category = ?;
+          JOIN Categories c ON p.categoryID = c.categoryID
+          WHERE c.category = ?;
         `;
     
         db.query(query, [categoryName], (err, results) => {
