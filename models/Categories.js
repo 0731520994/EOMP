@@ -115,24 +115,24 @@ class Categories{
     
 
 
-      fetchProductsInPerfumesCategory(req, res) {
-        const categoryName = 'Perfumes'; 
+      // fetchProductsInPerfumesCategory(req, res) {
+      //   const categoryName = 'Perfumes'; 
     
-        const query = `
-          SELECT p.prodID, p.prodName, p.price, p.prodUrl, c.categoryID, c.category
-          FROM Products p
-          JOIN Categories c ON p.categoryID = c.categoryID
-          WHERE c.category = ?;
-        `;
+      //   const query = `
+      //     SELECT p.prodID, p.prodName, p.price, p.prodUrl, c.categoryID, c.category
+      //     FROM Products p
+      //     JOIN Categories c ON p.categoryID = c.categoryID
+      //     WHERE c.category = ?;
+      //   `;
     
-        db.query(query, [categoryName], (err, results) => {
-          if (err) throw err;
-          res.json({
-            status: res.statusCode,
-            results: results,
-          });
-        });
-      }
+      //   db.query(query, [categoryName], (err, results) => {
+      //     if (err) throw err;
+      //     res.json({
+      //       status: res.statusCode,
+      //       results: results,
+      //     });
+      //   });
+      // }
     
 
       fetchProductsAccessoriesCategory(req, res) {
